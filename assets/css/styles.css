@@ -7,6 +7,7 @@
     --dark_font: #242629;
     --light_font: #c9efef;
     --light_font: #fff;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -19,12 +20,11 @@ body {
 .main {
     position: relative;
     overflow-x: hidden;
-    top: -4em;
 }
 
 .container {
     position: relative;
-    padding: 0 1em;
+    padding: 2em .5em;
     width: 100%;
 }
 
@@ -45,11 +45,12 @@ h2 {
 /*====================================== NAV BAR ======================================*/
 
 nav {
+    position: fixed;
     display: flex;
     width: 100%;
     padding-top: 2em;
     height: 4em;
-    /* background: #0005; */
+    background: #0007;
     justify-content: space-between;
     align-items: center;
 }
@@ -127,4 +128,43 @@ video {
     width: 3px;
     height: 3em;
     background: var(--light_font);
+}
+
+.home__arrow-down a {
+    padding-top: 2.5em;
+}
+
+
+
+/* ================================== HOTEL DESCRIPTION ================================= */
+
+.description {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.description__title {
+    margin: 2em 0 1em;
+    text-align: center;
+    font-size: var(--font_size_h2);
+}
+
+.description__info {
+    color: var(--dark_font);
+    font-weight: 500;
+    margin: 1.5em 0em;
+    text-align: center;
+    line-height: 1.5;
+    padding: 0 1em;
+}
+
+.description__img {
+    margin-top: 2em;
+    height: 13em;
+    box-shadow: 0 0 10px #000c;
+    background-position: center;
+	background-size: cover;
+    background-image: url('../images/hotel-small.jpg    ');
 }

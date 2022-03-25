@@ -1,0 +1,130 @@
+:root {
+    --font_size_h1: 34px;
+    --font_size_h2: 24px;
+    --font_size_p: 16px;
+    --font_size_span: 16px;
+    --font__size_nav: 21px;
+    --dark_font: #242629;
+    --light_font: #c9efef;
+    --light_font: #fff;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-size: var(--font_size_p);
+    font-family: sans-serif;
+}
+
+.main {
+    position: relative;
+    overflow-x: hidden;
+    top: -4em;
+}
+
+.container {
+    position: relative;
+    padding: 0 1em;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color:inherit
+}
+
+h1 {
+    font-size: var(--font_size_h1);
+}
+
+h2 {
+    font-size: var(--font_size_h2);
+}
+
+
+/*====================================== NAV BAR ======================================*/
+
+nav {
+    display: flex;
+    width: 100%;
+    padding-top: 2em;
+    height: 4em;
+    /* background: #0005; */
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav div {
+    font-weight: 700;
+    font-size: var(--font__size_nav);
+    padding: 0 1.5em;
+    color: #fff;
+}
+
+
+
+
+/*======================================== HOME ========================================*/
+
+.home {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+    filter: brightness(75%);
+}
+
+.home .container {
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.home__center-info {
+    color: var(--light_font);
+    text-align: center;
+    padding-top: 5em;
+}
+
+.home__center-info h2 {
+    margin: 1em 0;
+}
+
+.home__bottom-info {
+    position: relative;
+    margin-top: 5em;
+    color: var(--light_font);
+    text-align: center;
+}
+
+.home__arrow-down {
+    position: relative;
+    /* position: absolute; */
+    bottom: -10em;
+    color: #fff;
+    font-size: var(--font_size_´p);
+    letter-spacing: .15em;
+}
+
+.home__arrow-down::before {
+    content: '';
+    position: absolute;
+    bottom: .5em;
+    left: .35em;
+    width: 3px;
+    height: 3em;
+    background: var(--light_font);
+}

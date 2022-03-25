@@ -1,19 +1,26 @@
 :root {
-    --font_size_h1: 34px;
-    --font_size_h2: 24px;
-    --font_size_p: 16px;
-    --font_size_span: 16px;
-    --font__size_nav: 21px;
-    --dark_font: #242629;
+    --font_size: 16px;
+    --font_size_h1: 2.5em;
+    --font_size_h2: 1.5em;
+    --font_size_h2_subtitle: 1.25em;
+    --font_size_p: .9em;
+    --font_size_span: 1em;
+    --font_size_nav: 1.3em;
+    --font_size_small: 0.75rem;
+    --dark_font: #2c2e31;
     --light_font: #c9efef;
     --light_font: #fff;
+    --serif_font: 'GFS Didot', serif;
+    --sans_serif_font: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+
 }
 
 body {
+    font-family: Muli,sans-serif;
     height: 100vh;
     width: 100%;
-    font-size: var(--font_size_p);
+    font-size: var(--font_size);
     font-family: sans-serif;
 }
 
@@ -24,8 +31,12 @@ body {
 
 .container {
     position: relative;
-    padding: 2em .5em;
+    padding: 2em 0.6em;
     width: 100%;
+}
+
+p {
+    font-size: var(--font_size_p);
 }
 
 a {
@@ -39,8 +50,39 @@ h1 {
 
 h2 {
     font-size: var(--font_size_h2);
+    font-family: var(--serif_font);
 }
 
+.h2-title {
+    color: var(--dark_font);
+    margin-bottom: 2.5em;
+    letter-spacing: .25em;
+    font-size: .8em;
+    font-family: var(--serif_font);
+}
+
+.num-page {
+    font-family: var(--sans_serif_font);
+    margin: 2.5em 0;
+    display: flex;
+    align-items: center;
+    letter-spacing: .25em;
+    font-weight: 500;
+    font-size: var(--font_size_small);
+    line-height: .9em;
+}
+
+.num-page__item:not(:last-child) {
+    margin-right: 1em;
+}
+
+.num-page div{
+    display: inline-block;
+    background: var(--dark_font);
+    height: 1px;
+    width: 3em;
+    transform-origin: left center; 
+}
 
 /*====================================== NAV BAR ======================================*/
 
@@ -49,15 +91,16 @@ nav {
     display: flex;
     width: 100%;
     padding-top: 2em;
-    height: 4em;
-    background: #0007;
+    height: 3em;
+    /* background: #0007; */
     justify-content: space-between;
     align-items: center;
+    z-index: 100;
 }
 
 nav div {
     font-weight: 700;
-    font-size: var(--font__size_nav);
+    font-size: var(--font_size_nav);
     padding: 0 1.5em;
     color: #fff;
 }
@@ -116,7 +159,7 @@ video {
     /* position: absolute; */
     bottom: -10em;
     color: #fff;
-    font-size: var(--font_size_´p);
+    font-size: var(--font_size_p);
     letter-spacing: .15em;
 }
 
@@ -145,26 +188,26 @@ video {
     height: 100vh;
 }
 
+.description__img {
+    position: relative;
+    z-index: 30;
+    margin-top: 1em;
+    height: 13em;
+    /* box-shadow: 0 0 10px #000c; */
+    background-position: center;
+    background-size: cover;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url('../images/hotel-small.jpg');
+}
+
 .description__title {
-    margin: 2em 0 1em;
-    text-align: center;
-    font-size: var(--font_size_h2);
+    text-align: left;
 }
 
 .description__info {
+    font-family: var(--sans_serif_font);
     color: var(--dark_font);
-    font-weight: 500;
-    margin: 1.5em 0em;
-    text-align: center;
-    line-height: 1.5;
-    padding: 0 1em;
-}
-
-.description__img {
-    margin-top: 2em;
-    height: 13em;
-    box-shadow: 0 0 10px #000c;
-    background-position: center;
-	background-size: cover;
-    background-image: url('../images/hotel-small.jpg    ');
+    font-weight: 300;
+    text-align: justify;
+    line-height: 1.75;
 }

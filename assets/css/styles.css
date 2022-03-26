@@ -1,7 +1,7 @@
 :root {
     --font_size: 16px;
     --font_size_h1: 2.5em;
-    --font_size_h2: 1.5em;
+    --font_size_h2: 1.125em;
     --font_size_h2_subtitle: 1.25em;
     --font_size_p: .9em;
     --font_size_span: 1em;
@@ -54,12 +54,21 @@ h2 {
     font-family: var(--serif_font);
 }
 
+ul {
+    list-style: none;
+}
+
+button {
+    color: inherit;
+    border: none;
+    background: none;
+}
+
 .h2-title {
     color: var(--dark_font);
     color: #082d41;
     margin-bottom: 3.5em;
     letter-spacing: .25em;
-    font-size: .75em;
     font-family: var(--serif_font);
 }
 
@@ -86,7 +95,7 @@ h2 {
     transform-origin: left center; 
 }
 
-.p-info {
+.p-info p{
     font-family: var(--sans_serif_font);
     color: var(--dark_font);
     font-weight: 300;
@@ -116,11 +125,7 @@ nav div {
     color: #fff;
 }
 
-.nav-menu_btn {
-    color: inherit;
-    border: none;
-    background: none;
-}
+
 
 
 
@@ -162,6 +167,10 @@ video {
 
 .home__center-info h1 {
     margin-bottom: 0;
+}
+
+.home__center-info h2 {
+    font-size: var(--font_size_h2_subtitle);
 }
 
 .home__bottom-info {
@@ -291,10 +300,45 @@ video {
     width: 100vw;
     left: -.6em;
     display: flex;
-    background: #082d41;
+    background: #aaa;
     text-align: center;
     margin-top: 3em;
     justify-content: center;
     align-items: center;
 }
 
+
+
+/* =============================== RESTAURANT & BAR ================================= */
+
+.restaurant.container {
+    background-color: var(--detail_color);
+    height: 40em;
+}
+
+.num-page__restaurant {
+    justify-content: center;
+    color: var(--light_font);
+    margin: 10.5em 0 5em;
+}
+
+.num-page__restaurant .line-num-page {
+    background-color: var(--light_font);
+}
+
+.restaurant__list {
+    margin-left: 3em;
+}
+
+.restaurant__list-btn {
+    opacity: .5;
+}
+
+.restaurant__list .h2-title {
+    color: var(--light_font);
+    font-size: 1.75em;
+    text-align: left;
+    font-weight: 300;
+    margin-bottom: 2.5em;
+    letter-spacing: 0.1em;
+}

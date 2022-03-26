@@ -67,14 +67,14 @@ button {
 .h2-title {
     color: var(--dark_font);
     color: #082d41;
-    margin-bottom: 3.5em;
+    margin-bottom: 3em;
     letter-spacing: .25em;
     font-family: var(--serif_font);
 }
 
 .num-page {
     font-family: var(--sans_serif_font);
-    margin: 2.5em 0;
+    margin: 2.5em 0 1em;
     display: flex;
     align-items: center;
     letter-spacing: .25em;
@@ -272,8 +272,9 @@ video {
     /* box-shadow: 0 0 10px #000c; */
     background-position: center;
     background-size: cover;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
-                    url('../images/hotel-small.jpg');
+    background-image: url('../images/hotel1.jpg');
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)),
+                    url('../images/hotel1.jpg'); */
 }
 
 .description__title {
@@ -336,9 +337,30 @@ video {
 
 .restaurant__list .h2-title {
     color: var(--light_font);
-    font-size: 1.75em;
+    font-size: 1.65em;
     text-align: left;
     font-weight: 300;
     margin-bottom: 2.5em;
     letter-spacing: 0.1em;
 }
+
+
+
+
+/* ===================================== SPA ======================================== */
+
+.spa__img {
+    position: relative;
+    z-index: 30;
+    margin-top: 1em;
+    height: 13em;
+    /* box-shadow: 0 0 10px #000c; */
+    background-position: center;
+    background-size: cover;
+    background-image: url('../images/spa.jpg');
+}
+
+
+
+
+

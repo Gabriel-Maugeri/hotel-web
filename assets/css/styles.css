@@ -363,4 +363,41 @@ video {
 
 
 
+/* =================================== CONTACT ====================================== */
+
+.contact.container {
+    background: var(--detail_color);
+    background-image: url('../images/mountains.png');
+    background-size: cover;
+    background-position: center;
+    padding-bottom: 1.5em;
+}
+
+.contact-info {
+    color: var(--light_font);
+    font-family: var(--serif_font);
+    font-size: 1.5em;
+    margin-bottom: 1.5em;
+}
+
+.contact-btn {
+    background: var(--detail_color);
+    border: 1px solid var(--light_font);
+    width: 100%;
+    padding: 1.5em 0;
+    color: var(--light_font);
+    font-family: var(--sans_serif_font);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.contact-btn__span {
+    margin-left: 2.5em;
+}
+
+
+
+
+
+
 

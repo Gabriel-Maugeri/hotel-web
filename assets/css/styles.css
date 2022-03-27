@@ -104,6 +104,20 @@ button {
     margin-bottom: 1.5em;
 }
 
+
+.swiper {
+    position: relative;
+    height: 13em;
+    width: 100vw;
+    left: -.6em;
+    display: flex;
+    background: inherit;
+    text-align: center;
+    margin-top: 3em;
+    justify-content: center;
+    align-items: center;
+}
+
 /*====================================== NAV BAR ======================================*/
 
 nav {
@@ -121,8 +135,26 @@ nav {
 nav div {
     font-weight: 700;
     font-size: var(--font_size_nav);
-    padding: 0 1.5em;
+    padding: 0 1em;
     color: #fff;
+}
+
+.nav__book {
+    padding: 0;
+    margin-left: 1.5em;
+    
+}
+
+.nav__btn-book {
+    border: 1px solid var(--light_font);
+    font-size: var(--font_size_small);
+    padding: 1em 2.5em;
+    font-family: var(--sans_serif_font);
+    font-weight: 600;
+}
+
+.nav-menu {
+    padding-left: 0;
 }
 
 
@@ -295,18 +327,7 @@ video {
     margin-bottom: 4em;
 }
 
-.swiper {
-    position: relative;
-    height: 13em;
-    width: 100vw;
-    left: -.6em;
-    display: flex;
-    background: #aaa;
-    text-align: center;
-    margin-top: 3em;
-    justify-content: center;
-    align-items: center;
-}
+
 
 
 

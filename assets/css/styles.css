@@ -11,8 +11,9 @@
     --light_font: #fff;
     --serif_font: 'GFS Didot', serif;
     --sans_serif_font: 'Poppins', sans-serif;
-    --lightblue-white: #f8f9fa;
+    --lightblue_white: #f8f9fa;
     --detail_color: #082d41;
+    --detail_color_2: #4285f4;
     scroll-behavior: smooth;
 
 }
@@ -293,7 +294,7 @@ video {
 /* ================================== HOTEL DESCRIPTION ================================= */
 
 .description.container {
-    background: var(--lightblue-white);
+    background: var(--lightblue_white);
 }
 
 .description__img {
@@ -491,196 +492,44 @@ footer {
     filter: brightness(70%);
 }
 
-.form {
+.booking-form {
     margin-top: 1em;
-    border-top: 1px solid #aaa;
+    /* border-top: 1px solid #aaa; */
     padding: 1em .5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr .75fr;
+    box-shadow: 0px 5px 20px #bbb;
 }
 
-.date-form {
+.check-in-form {
+    margin-right: 1em;
+}
+
+.check-out-form {
+    margin-left: 1em;
+}
+
+
+.form {
+    display: flex;
+    flex-flow: column;
+    padding: .5em 0em;
+}
+
+.room-people-form {
+    grid-column: 1 / 3;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.multi-step {
-	margin: .5em 0;
-    overflow-x: hidden;
-}
-
-/* // Setting up flexbox for list */
-.multi-step-list {
-	position: relative;
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	list-style-type: none;
-	padding: 0;
-    font-size: var(--font_size_small);
-	/* .multi-step-item:first-child { margin-left: 0; } */
-	/* .multi-step-item:last-child { margin-right: 0; } */
-}
-
-.multi-step-list:first-child {
-    margin-left: 0;
-}
-
-.multi-step-item:last-child {
-    margin-right: 0;
-}
-
-/* // Defaults for each 'step' */
-.multi-step-item {
-	position: relative;
-	width: 100%;
-	margin: 0 0.15em;
-	/* @media only screen and (max-width: $screen-xs-max) {
-		margin: 0 ($base-margin / 6);
-	} */
-	z-index: 2;
-	border-radius: .2em;
-
-}
-
-.active:hover { 
-    cursor: pointer; 
-}
-.current .item-title {
-    color: #fff;
-}
-.active.current:hover .item-title {
-    color: #4285f4;
-}
-
-.item-title {
-    position: relative;
-    margin: 0;
-    z-index: 2;
-    color: #4285f4;
-    font-weight: 600;
-    margin: 0;
-    text-align: center;
-}
-
-/* Creates the 'arrow' effect / background colors */
-.item-wrap {
-	padding: .75em;
-	position: relative;
-	height: 100%;
-}
-
-.item-wrap::before, .item-wrap::after {
-    position: absolute;
-    left: 0;
-    content: ' ';
-    width: 100%;
-    height: 50.5%;
-    z-index: 1;
-    background-color: #eee;
-}
-
-.item-wrap::before {
-    top: 0;
-    transform: skew(20deg);
-    border-radius: .2em .2em 0 0;
-}
-
-.item-wrap::after {
-    bottom: 0;
-    transform: skew(-20deg);
-    border-radius: 0 0 .2em .2em;
-}
-
-/*  Changing arrow colors based on state */
-.current .item-wrap:before, .current .item-wrap:after {
-	background: #4285f4;
-}
-
-.active:hover .item-wrap:before, .active:hover .item-wrap:after {
-	background: #d8f1ff;
-}
-
-/* // Changing step styles based on :first/:last step */
-.multi-step-item:first-child .item-wrap, .multi-step-item:last-child .item-wrap {
-	width: 100%;
-	border-radius: .2em;
-}
-
-.multi-step-item:first-child .item-wrap::before,
-.multi-step-item:first-child .item-wrap::after {
-    width: 50%;
-    left: 50%;
-}
-
-.multi-step-item:last-child .item-wrap::before, 
-.multi-step-item:last-child .item-wrap::after {
-    width: 50%;
-}
-
-/* // If first step, only point on the right */
-.multi-step-item:first-child .item-wrap {
-	background: linear-gradient(to right, #eee 95%, transparent 5%);
-}
-
-
-.active.multi-step-item:first-child:hover .item-wrap {
-	background: linear-gradient(to right, #d8f1ff 95%, transparent 5%);
-}
-.current.multi-step-item:first-child .item-wrap {
-	background: linear-gradient(to right, #4285f4 95%, transparent 5%);
-}
-
-/* // If last step, only indent on the left */
-.multi-step-item:last-child .item-wrap {
-	background: linear-gradient(to left, #eee 95%, transparent 5%);
-}
-
-.multi-step-item:last-child .item-wrap::before, 
-.multi-step-item:last-child .item-wrap::after {
-    right: 50%;
-}
-
-
-.active.multi-step-item:last-child:hover .item-wrap {
-	background: linear-gradient(to left, #d8f1ff 95%, transparent 5%);
-}
-.current.multi-step-item:last-child .item-wrap {
-	background: linear-gradient(to left, #4285f4 95%, transparent 5%);
-}
-
-
-.completed .item-wrap:before, .completed .item-wrap:after {
-	background: #ccc;
-    
-}
-
-.completed .item-title {
-    color: var(--dark_font);
-}
-
-.completed.multi-step-item:first-child .item-wrap {
-	background: linear-gradient(to right, #ccc 95%, transparent 5%);
-}
-
-.active.completed:hover .item-title {
-    color: #4285f4;
+.confirm-btn {
+    grid-column: 1 / 3;
+    background: var(--detail_color_2);
+    border: none;
+    border-radius: .15em;
+    height: 2em;
+    color: var(--light_font);
+    font-family: var(--sans_serif_font);
 }

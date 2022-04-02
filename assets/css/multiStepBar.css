@@ -30,14 +30,8 @@
     border-radius: .2em;
 
 }
-.active:hover { 
-    cursor: pointer; 
-}
-.current .item-title {
+.active .item-title {
     color: var(--light_font);
-}
-.active.current:hover .item-title {
-    color: var(--detail_color_2);
 }
 .item-title {
     position: relative;
@@ -74,11 +68,8 @@
     border-radius: 0 0 .2em .2em;
 }
 /*  Changing arrow colors based on state */
-.current .item-wrap:before, .current .item-wrap:after {
+.active .item-wrap:before, .active .item-wrap:after {
     background: var(--detail_color_2);
-}
-.active:hover .item-wrap:before, .active:hover .item-wrap:after {
-    background: #d8f1ff;
 }
 /* // Changing step styles based on :first/:last step */
 .multi-step-item:first-child .item-wrap, .multi-step-item:last-child .item-wrap {
@@ -98,10 +89,7 @@
 .multi-step-item:first-child .item-wrap {
     background: linear-gradient(to right, #eee 95%, transparent 5%);
 }
-.active.multi-step-item:first-child:hover .item-wrap {
-    background: linear-gradient(to right, #d8f1ff 95%, transparent 5%);
-}
-.current.multi-step-item:first-child .item-wrap {
+.active.multi-step-item:first-child .item-wrap {
     background: linear-gradient(to right, var(--detail_color_2) 95%, transparent 5%);
 }
 /* // If last step, only indent on the left */
@@ -112,10 +100,7 @@
 .multi-step-item:last-child .item-wrap::after {
     right: 50%;
 }
-.active.multi-step-item:last-child:hover .item-wrap {
-    background: linear-gradient(to left, #d8f1ff 95%, transparent 5%);
-}
-.current.multi-step-item:last-child .item-wrap {
+.active.multi-step-item:last-child .item-wrap {
     background: linear-gradient(to left, var(--detail_color_2) 95%, transparent 5%);
 }
 .completed .item-wrap:before, .completed .item-wrap:after {
@@ -127,9 +112,6 @@
 }
 .completed.multi-step-item:first-child .item-wrap {
     background: linear-gradient(to right, #ccc 95%, transparent 5%);
-}
-.active.completed:hover .item-title {
-    color: var(--detail_color_2);
 }
 
 

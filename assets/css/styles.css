@@ -125,40 +125,58 @@ nav {
     position: fixed;
     display: flex;
     width: 100%;
-    padding-top: 2em;
-    height: 3em;
+    padding-top: 1.5rem;
+    height: 3.5rem;
     /* background: #0007; */
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    color: #fff;
+    transition: all .5s;
 }
 
 nav div {
     font-weight: 700;
     font-size: var(--font_size_nav);
-    padding: 0 1em;
-    color: #fff;
+    padding: 0 1rem;
+    
 }
 
 .nav__book {
     padding: 0;
-    margin-left: 1.5em;
+    margin-left: 1.5rem;
     
 }
 
 .nav__btn-book {
+    position: relative;
     border: 1px solid var(--light_font);
     font-size: var(--font_size_small);
-    padding: 1em 2.5em;
+    padding: .75rem 2.5rem;
     font-family: var(--sans_serif_font);
     font-weight: 600;
+    transition: border .5s;
 }
 
 .nav-menu {
     padding-left: 0;
 }
 
+nav.scrolled {
+    background: #fff;
+    box-shadow: 0 1px 5px #777;
+    padding-top: .3rem;
+    
+}
 
+nav.scrolled div {
+    color: var(--dark_font);
+}
+
+nav.scrolled .nav__btn-book {
+    top: -.3rem;
+    border: 1px solid var(--dark_font);
+}
 
 
 
@@ -492,14 +510,23 @@ footer {
     filter: brightness(70%);
 }
 
-.booking-form {
+.card {
     margin-top: 1em;
-    /* border-top: 1px solid #aaa; */
     padding: 1em .5em;
+    box-shadow: 0px 5px 20px #bbb;
+    display: none;
+}
+
+.card.active {
+    display: block;
+}
+
+.booking-form {
+    /* border-top: 1px solid #aaa; */
+    
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr .75fr;
-    box-shadow: 0px 5px 20px #bbb;
+    grid-template-rows: 1fr 1fr;
 }
 
 .check-in-form {
@@ -524,12 +551,41 @@ footer {
     justify-content: space-between;
 }
 
-.confirm-btn {
-    grid-column: 1 / 3;
+.next-btn:first-child {
+    position: relative;
+    right: 0;
+}
+
+.button {
     background: var(--detail_color_2);
     border: none;
     border-radius: .15em;
     height: 2em;
     color: var(--light_font);
     font-family: var(--sans_serif_font);
+    padding: 0 1em;
+}
+
+
+
+
+
+.room-select {
+    display: flex;
+    flex-flow: column;
+    align-content: center;
+}
+
+.room {
+    height: 25em;
+    text-align: center;
+}
+
+
+
+
+
+.extra {
+    height: 10em;
+    text-align: center;
 }

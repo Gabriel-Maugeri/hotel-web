@@ -18,9 +18,9 @@
     <body>
 
          <!-- ====================================== NAV BAR ====================================== -->
-         <nav>
+         <nav class="nav">
             <div class="nav-logo">
-                <a href="#home">
+                <a href="index.html#home">
                     <span>
                         LOGO
                     </span>
@@ -39,23 +39,23 @@
             <div class="top-img"></div>
             <div class="container">                   
                 <div class="multi-step">
-                    <ul class="multi-step-list">
-                        <li class="multi-step-item active completed">
-                            <div class="item-wrap">
+                    <ul class="multi-step-list" data-multi-step-bar>
+                        <li class="multi-step-item" data-step-bar>
+                            <div class="item-wrap" >
                                 <p class="item-title">SELECCION</p>
                             </div>
                         </li>
-                        <li class="multi-step-item active current">
+                        <li class="multi-step-item" data-step-bar>
                             <div class="item-wrap">
                                 <p class="item-title">HABITACION</p>
                             </div>
                         </li>
-                        <li class="multi-step-item ">
+                        <li class="multi-step-item" data-step-bar>
                             <div class="item-wrap">
                                 <p class="item-title">EXTRAS</p>
                             </div>
                         </li>
-                        <li class="multi-step-item">
+                        <li class="multi-step-item" data-step-bar>
                             <div class="item-wrap">
                                 <p class="item-title">CONFIRMAR</p>
                             </div>
@@ -68,44 +68,124 @@
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque voluptatibus pariatur possimus commodi hic!.  
                     </p>
                 </div>
-                <form class="booking-form">
-                    <div class="check-in-form form">
-                        <span>Check-in</span>
-                        <input type="date" placeholder="DD/MM/AAAA">
-                    </div>
-                    <div class="check-out-form form">
-                        <span>Check-out</span>
-                        <input type="date" placeholder="DD/MM/AAAA">
-                    </div>
-                    <div class="room-people-form">
-                        <div class="room-form">
-                            <div class="rooms form">
-                                <span>Habitaciones</span>
-                                <select>
-                                    <option>1</option>
-                                    <option>2</option>
-                                    <option>3</option>
-                                </select>
+                <form class="form" data-multi-step>
+                    <div class="card" data-step>
+                        <div class="booking-form">
+                            <div class="check-in-form form">
+                                <span>Check-in</span>
+                                <input type="date" required placeholder="DD/MM/AAAA">
                             </div>
+                            <div class="check-out-form form">
+                                <span>Check-out</span>
+                                <input type="date" required placeholder="DD/MM/AAAA">
+                            </div>
+                            <div class="room-people-form">
+                                <div class="room-form">
+                                    <div class="rooms form">
+                                        <span>Habitaciones</span>
+                                        <select>
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="adults-form form">
+                                    <span>Adultos</span>
+                                    <select>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                                <div class="kids-form form">
+                                    <span>Niños</span>
+                                    <select>
+                                        <option>0</option>
+                                        <option>1</option>
+                                        <option>2</option>
+                                        <option>3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
                         </div>
-                        <div class="adults-form form">
-                            <span>Adultos</span>
-                            <select>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
+                        <button type="button" class="next-btn button" data-next>SIGUIENTE</button>
+                    </div>
+                    <div class="card" data-step>
+                        <div class="room-select">
+                            <ul class="room-list">
+                                <li>
+                                    <div class="room">
+                                        BEST ROOM
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="room">
+                                        SECOND ROOM
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="room">
+                                        THIRD ROOM
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="room">
+                                        FOURTH ROOM
+                                    </div>
+                                </li>                 
+                            </ul>
                         </div>
-                        <div class="kids-form form">
-                            <span>Niños</span>
-                            <select>
-                                <option>1</option>
-                                <option>2</option>
-                                <option>3</option>
-                            </select>
+                        <button type="button" class="prev-btn button" data-prev>ATRAS</button>
+                        <button type="button" class="next-btn button" data-next>SIGUIENTE</button>
+                    </div>
+                    <div class="card" data-step>
+                        <div class="extra-select">
+                            <ul class="extra-list">
+                                <li>
+                                    <div class="room">
+                                        ROOM
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="extra1 extra">
+                                        EXTRA 1
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="extra2 extra">
+                                        EXTRA 2
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="extra3 extra">
+                                        EXTRA 3
+                                    </div>
+                                </li>                 
+                            </ul>
+                        </div>
+                        <button type="button" class="prev-btn button" data-prev>ATRAS</button>
+                        <button type="button" class="next-btn button" data-next>SIGUIENTE</button>
+                    </div>
+                    <div class="card" data-step>
+                        <div class="booking-confirm">
+                            <div class="booking-info room">
+                                BOOKING INFO
+                            </div>
+                            <div class="personal-info room">
+                                PERSONAL INFO
+                            </div>
+                            <div class="reserv-guarantee room">
+                                RESERVATION GUARANTEE
+                            </div>
+                            <div class="confirm extra">
+                                RESERVATION CONFIRM
+                            </div>
+                            <button type="button" class="prev-btn button" data-prev>ATRAS</button>
+                            <button type="submit" class="next-btn button" data-next>CONFIRMAR</button>
                         </div>
                     </div>
-                    <input type="submit" class="confirm-btn" value="CONFIRMAR">
                 </form>
             </div>
 
@@ -139,7 +219,6 @@
             
         </div>
         
-        
-        <script src="" async defer></script>
+        <script src="assets/js/main.js" async defer></script>
     </body>
 </html>

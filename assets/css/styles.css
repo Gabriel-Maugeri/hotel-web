@@ -150,6 +150,7 @@ nav div {
 
 .nav__btn-book {
     position: relative;
+    top: -.1rem;
     border: 1px solid var(--light_font);
     font-size: var(--font_size_small);
     padding: .75rem 2.5rem;
@@ -345,6 +346,70 @@ video {
     text-align: center;
     margin-bottom: 4em;
 }
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+}
+
+.slider {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.slider__card {
+    position: relative;
+    width: 280px;
+}
+
+.slider__card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.slider__img-container {
+    height: 12em;
+    width: 95%;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.slider__card-desc {
+    margin: 2em 0 2.5em;
+    font-size: var(--font_size_span);
+    font-family: var(--sans_serif_font);
+    position: relative;
+    padding-left: 45px;
+    width: 70%;
+}
+
+.slider__card-desc::before {
+    content: "";
+    width: 25px;
+    height: 1px;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+}
+
+.swiper-button-next {
+    
+}
+
+.swiper-pagination-bullet {
+    height: 10px;
+    width: 20px;
+    background: var(--detail_color);
+}
+
 
 
 

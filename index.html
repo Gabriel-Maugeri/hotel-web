@@ -6,13 +6,23 @@
         <title>Nombre hotel</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- =========================== CSS ========================== -->
         <link rel="stylesheet" href="assets/css/normalize.css">
         <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- ====================== GOOGLE FONTS ====================== -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=GFS+Didot&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-        <script src="https://kit.fontawesome.com/a9a995419b.js" crossorigin="anonymous"></script>
+        
+        <!-- =================== LINK SWIPER'S CSS ==================== -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+        
+        <!-- ================== FONTAWESOME CDN LINK ================== -->
+        <script src="https://kit.fontawesome.com/a9a995419b.js" crossorigin="anonymous"></script> 
+    
     </head>
     <body>
 
@@ -38,7 +48,6 @@
         </nav>
 
         <div class="main">
-
 
         <!-- ======================================== HOME ======================================== -->
             <section id="home" class="home">
@@ -116,9 +125,49 @@
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde aperiam ut cumque nemo quam quod repellendus sint quibusdam eius accusamus explicabo non, magnam nobis deserunt alias? Mollitia sit obcaecati tempori. Dolore nostrum, debitis repellendus eos, in rerum dolorem obcaecati harum quibusdam libero possimus.
                     </p>
                 </div>
-                <div class="swiper">
-                    ACA IRIA UN SLIDER CON LA FOTO DE LA HABITACION Y EL NOMBRE
-                </div>
+                <div class="swiper mySwiper slider">
+                    <div class="swiper-wrapper slider-content">
+                        <div class="swiper-slide slider__card">
+                          <div class="slider__card-content">
+                            <div class="slider__img-container">
+                                <img src="assets/images/pool.jpg" alt="" class="slider__card-img">
+                            </div>
+                            <span class="slider__card-desc">Deluxe Double con vista al mar</span>
+                          </div>
+                        </div>
+                        <div class="swiper-slide slider__card">
+                          <div class="slider__card-content">
+                            <div class="slider__img-container">
+                                <img src="assets/images/hotel.jpg" alt="" class="slider__card-img">
+                            </div>
+                            <span class="slider__card-desc">Deluxe Triple con vista al mar</span>
+                          </div>
+                        </div>
+                        <div class="swiper-slide slider__card">
+                          <div class="slider__card-content">
+                            <div class="slider__img-container">
+                                <img src="assets/images/hotel1.jpg" alt="" class="slider__card-img">
+                            </div>
+                            <span class="slider__card-desc">Deluxe Simple con vista al mar</span>
+                          </div>
+                        </div>
+                        <div class="swiper-slide slider__card">
+                          <div class="slider__card-content">
+                            
+                            <span class="slider__card-desc">Deluxe Doble</span>
+                          </div>
+                        </div>
+                        <div class="swiper-slide slider__card">
+                          <div class="slider__card-content">
+                            
+                            <span class="slider__card-desc">Deluxe Simple</span>
+                          </div>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next slider-btn" hidden></div>
+                    <div class="swiper-button-prev slider-btn"></div>
+                    <div class="swiper-pagination"></div>
+                  </div>
             </section>
 
 
@@ -247,6 +296,12 @@
 
 
         </div>
-        <script src="assets/js/main.js" async defer></script>
+        <script src="assets/js/main.js"></script>
+        
+
+        <!-- ======================== SWIPER JS ======================= -->
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script src="assets/js/slider.js"></script>
+
     </body>
 </html>

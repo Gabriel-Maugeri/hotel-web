@@ -380,14 +380,14 @@ video {
     overflow: hidden;
 }
 
-
 .slider__card-desc {
     margin: 2em 0 2.5em;
     font-size: var(--font_size_span);
     font-family: var(--sans_serif_font);
     position: relative;
-    padding-left: 45px;
     width: 70%;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .slider__card-desc::before {
@@ -396,17 +396,15 @@ video {
     height: 1px;
     background: #000;
     position: absolute;
-    left: 0;
+    left: -1.5em;
     top: 0.5em;
 }
 
-.swiper-button-next {
-    
+.slider-btn {
+    display: none;
 }
 
 .swiper-pagination-bullet {
-    height: 10px;
-    width: 20px;
     background: var(--detail_color);
 }
 
@@ -504,7 +502,6 @@ video {
 
 
 /* ================================== PACKAGES ====================================== */
-
 
 
 

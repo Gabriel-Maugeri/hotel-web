@@ -12,8 +12,19 @@ window.onscroll = function() {
 }
 
 
+// ============================== MENU REVEAL ==============================
+
+const menuBtn = document.querySelector(".nav-menu_btn");
+const menu = document.querySelector(".menu");
+const menuLink = document.querySelectorAll(".menu-btn");
+
+menuBtn.addEventListener("click", e => {
+    menu.classList.toggle("active");
+});
 
 
-
-
-
+menuLink.forEach(element => {
+    element.addEventListener("click", e => {
+        menu.classList.toggle("active");
+    });
+});

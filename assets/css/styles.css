@@ -6,6 +6,7 @@
     --font_size_p: .9em;
     --font_size_span: 1em;
     --font_size_nav: 1.3em;
+    --font_size_menu: 1.5em;
     --font_size_small: 0.75rem;
     --dark_font: #2c2e31;
     --light_font: #fff;
@@ -174,6 +175,10 @@ nav.scrolled div {
     color: var(--dark_font);
 }
 
+.nav.scrolled .nav-logo_link {
+    color: var(--dark_font);
+}
+
 nav.scrolled .nav__btn-book {
     top: -.3rem;
     border: 1px solid var(--dark_font);
@@ -182,7 +187,52 @@ nav.scrolled .nav__btn-book {
 
 
 
-/*======================================== HOME ========================================*/
+/* ====================================== MENU ======================================= */
+
+.menu {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    top: -100vh;
+    background: var(--detail_color);
+    color: var(--light_font);
+    font-family: var(--serif_font);
+    font-size: var(--font_size_menu);
+    display: flex;
+    justify-content: center;
+    z-index: 75;
+    transition: top .75s;
+}
+
+.menu-content {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 7em 0 5em;
+}
+
+.menu-link {
+    width: 100%;
+}
+
+.menu-btn {
+    width: 100%;
+    text-align: center;
+    padding: .5em 0;
+}
+
+.menu.active {
+    top: 0;
+}
+
+
+
+
+
+
+
+/*======================================= HOME ========================================*/
 
 .home {
     display: flex;
@@ -310,7 +360,7 @@ video {
 
 
 
-/* ================================== HOTEL DESCRIPTION ================================= */
+/* ================================= HOTEL DESCRIPTION =============================== */
 
 .description.container {
     background: var(--lightblue_white);

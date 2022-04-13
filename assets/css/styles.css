@@ -3,6 +3,7 @@
     --font_size_h1: 2.5em;
     --font_size_h2: 1.125em;
     --font_size_h2_subtitle: 1.25em;
+    --font_size_title: 1.7em;
     --font_size_p: .9em;
     --font_size_span: 1em;
     --font_size_nav: 1.3em;
@@ -34,7 +35,7 @@ body {
 
 .container {
     position: relative;
-    padding: 2em 0.6em;
+    padding: 2em 1em;
     width: 100%;
 }
 
@@ -264,7 +265,7 @@ video {
 .home__center-info {
     color: var(--light_font);
     text-align: center;
-    margin-top: 5em;
+    margin-top: 10em;
 }
 
 .home__center-info h1 {
@@ -285,7 +286,7 @@ video {
 
 
 .home__explore {
-    margin-top: 2em;
+    margin-top: 10em;
     width: 13em;
     height: 13em;
     display: flex;
@@ -466,8 +467,21 @@ video {
 /* =============================== RESTAURANT & BAR ================================= */
 
 .restaurant.container {
+    position: relative;
     background-color: var(--detail_color);
     height: 40em;
+    overflow: hidden;
+}
+
+.services-list {
+    position: absolute;
+    top: -100vh;
+    left: 0;
+    transition: top .75s;
+}
+
+.services-list.active {
+    top: 0;
 }
 
 .num-page__restaurant {
@@ -496,6 +510,69 @@ video {
     margin-bottom: 2.5em;
     letter-spacing: 0.1em;
 }
+
+
+
+.services-info {
+    position: absolute;
+    top: 100vh;
+    left: 0;
+    padding: 2em 1em;
+    color: var(--light_font);
+    display: flex;
+    flex-flow: column;
+    transition: top .75s;
+}
+
+.services-info.active {
+    top: 0;
+}
+
+.service-title h2{
+    font-size: var(--font_size_title);
+    font-family: var(--serif_font);
+    font-weight: 100;
+    text-align: center;
+    margin: 1em 0;
+}
+
+.service-description {
+    text-align: justify;
+    margin: 1em 0 2.5em;
+    font-family: var(--sans_serif_font);
+    line-height: 1.5em;
+}
+
+.service-data {
+    text-align: justify;
+}
+
+.service-data__item {
+    position: relative;
+    margin: 0em 1em 2em 1em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.service-data__desc {
+    max-width: 60%;
+}
+
+.service-data__item::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    opacity: .3;
+    width: 100%;
+    height: 1px;
+    bottom: -1em;
+    left: 0;
+}
+
+
+
+
+
 
 
 

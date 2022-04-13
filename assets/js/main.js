@@ -12,7 +12,7 @@ window.onscroll = function() {
 }
 
 
-// ============================== MENU REVEAL ==============================
+// ================================ MENU REVEAL ===============================
 
 const menuBtn = document.querySelector(".nav-menu_btn");
 const menu = document.querySelector(".menu");
@@ -26,5 +26,20 @@ menuBtn.addEventListener("click", e => {
 menuLink.forEach(element => {
     element.addEventListener("click", e => {
         menu.classList.toggle("active");
+    });
+});
+
+
+
+// ============================== SERVICES REVEAL =============================
+
+const restautantBtn = document.querySelectorAll(".restaurant__list-btn")
+const restaurantList = document.querySelector(".services-list");
+const restaurantInfo = document.querySelector(".services-info")
+
+restautantBtn.forEach(element => {
+    element.addEventListener("click", e => {
+        restaurantList.classList.toggle("active");
+        restaurantInfo.classList.toggle("active");
     });
 });
